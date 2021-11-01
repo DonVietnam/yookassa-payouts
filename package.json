@@ -1,0 +1,41 @@
+{
+  "name": "yookassa-payouts",
+  "author": "DonVietnam",
+  "version": "1.0.0",
+  "description": "A package for implementing massive pauouts using the Yookassa api.",
+  "license": "MIT",
+  "keywords": [
+    "vietnam",
+    "nodejs",
+    "payouts",
+    "yookassa",
+    "yandex",
+    "money"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DonVietnam/yookassa-payouts"
+  },
+  "bugs": {
+    "url": "https://github.com/DonVietnam/yookassa-payouts/issues"
+  },
+  "homepage": "https://github.com/DonVietnam/yookassa-payouts",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon --signal SIGTERM --exec \"node src/app.js\"",
+    "dev-fix": "nodemon --exec \"npm run fix && node src/app.js\"",
+    "lint": "eslint --ignore-path .gitignore .",
+    "fix": "eslint --fix --ignore-path .gitignore ."
+  },
+  "engines": {
+    "node": "^12.9 || 14 || 16"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "nodemon": "^2.0.4"
+  }
+}
