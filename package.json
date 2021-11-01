@@ -20,9 +20,9 @@
     "url": "https://github.com/DonVietnam/yookassa-payouts/issues"
   },
   "homepage": "https://github.com/DonVietnam/yookassa-payouts",
-  "main": "src/app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node index.js",
     "dev": "nodemon --signal SIGTERM --exec \"node src/app.js\"",
     "dev-fix": "nodemon --exec \"npm run fix && node src/app.js\"",
     "lint": "eslint --ignore-path .gitignore .",
@@ -32,7 +32,8 @@
     "node": "^12.9 || 14 || 16"
   },
   "dependencies": {
-
+    "fast-xml-parser": "^3.21.1",
+    "undici": "^4.9.3"
   },
   "devDependencies": {
     "eslint": "^7.8.1",
