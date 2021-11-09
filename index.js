@@ -4,16 +4,16 @@ const https = require('https');
 const parser = require('fast-xml-parser');
 const fs = require( 'fs' );
 
-const certPath = path.resolve( 'D:/certs/mine', 'cert.pem' );
-const keyPath = path.resolve( 'D:/certs/mine', 'key.pem' );
+const certPath = path.resolve( '/home/donvietnam/certs/yookassa/cert.pem' );
+const keyPath = path.resolve( '/home/donvietnam/certs/yookassa/key.pem' );
 
 const cert = fs.readFileSync( certPath );
 const key = fs.readFileSync( keyPath );
 
-const xml = '<balanceRequest agentId="123" clientOrderId="12345" requestDT="2011-07-01T20:38:00.000Z"/>';
+const xml = '<balanceRequest agentId="500685" clientOrderId="12345" requestDT="2011-07-01T20:38:00.000Z"/>';
 const url = 'https://payouts.yookassa.ru:9094/webservice/deposition/api/balance';
 
-const encodedData = crypto.publicEncrypt( publicKey, Buffer.from( xml ) );
+//const encodedData = crypto.publicEncrypt( publicKey, Buffer.from( xml ) );
 
 const options = {
   hostname: 'payouts.yookassa.ru',
@@ -39,7 +39,7 @@ req.on('error', error => {
   console.error(error)
 })
 
-req.write(encodedData)
+req.write( xml );
 
-//req.end()
+req.end()
 //console.log( encodedData );
