@@ -7,7 +7,7 @@
     "es2020": true,
     "es2021": true
   },
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2021
   },
@@ -18,7 +18,6 @@
     "semi": ["error", "always"],
     "no-loop-func": ["error"],
     "block-spacing": ["error", "always"],
-    "camelcase": ["error"],
     "eqeqeq": ["error", "always"],
     "brace-style": [
       "error",
@@ -89,16 +88,6 @@
       }
     ],
     "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": [
-      "error",
-      {
-        "anonymous": "never",
-        "named": "never",
-        "asyncArrow": "always"
-      }
-    ],
-    "space-in-parens": ["error", "always"],
-    "space-infix-ops": ["error"],
     "space-unary-ops": [
       "error",
       {
@@ -139,7 +128,6 @@
     "prefer-const": ["error"],
     "prefer-rest-params": ["error"],
     "prefer-spread": ["error"],
-    "rest-spread-spacing": ["error", "never"],
-    "template-curly-spacing": ["error", "always"]
+    "rest-spread-spacing": ["error", "never"]
   }
 }

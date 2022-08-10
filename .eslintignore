@@ -1,3 +1,6 @@
-node_modules/
-documents/
-.github/
+node_modules
+.github
+test
+.vscode
+docs
+lang

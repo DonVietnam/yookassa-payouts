@@ -1,42 +1,61 @@
 {
   "name": "yookassa-payouts",
-  "author": "DonVietnam",
+  "author": {
+    "name": "DonVietnam",
+    "email": "don.vietnam.js@gmail.com"
+  },
   "version": "1.0.0",
   "description": "A package for implementing massive pauouts using the Yookassa api.",
   "license": "MIT",
   "keywords": [
-    "vietnam",
-    "nodejs",
-    "payouts",
     "yookassa",
+    "payouts",
+    "payout",
     "yandex",
-    "money"
+    "kassa",
+    "xml-converter",
+    "openssl-smime",
+    "pk7cs",
+    "ssl",
+    "vietnam",
+    "nodejs"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/DonVietnam/yookassa-payouts"
   },
   "bugs": {
-    "url": "https://github.com/DonVietnam/yookassa-payouts/issues"
+    "url": "https://github.com/DonVietnam/yookassa-payouts/issues",
+    "email": "don.vietnam.js@gmail.com"
   },
   "homepage": "https://github.com/DonVietnam/yookassa-payouts",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib/",
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon --signal SIGTERM --exec \"node src/app.js\"",
-    "dev-fix": "nodemon --exec \"npm run fix && node src/app.js\"",
+    "debug": "node --inspect index.js",
     "lint": "eslint --ignore-path .gitignore .",
-    "fix": "eslint --fix --ignore-path .gitignore ."
+    "fix": "eslint --fix --ignore-path .gitignore .",
+    "test": "npm run lint && jest test"
   },
   "engines": {
-    "node": "^12.9 || 14 || 16"
-  },
-  "dependencies": {
-    "fast-xml-parser": "^3.21.1",
-    "undici": "^4.9.3"
+    "node": ">=16"
   },
   "devDependencies": {
+    "@types/node": "^16.11.7",
     "eslint": "^7.8.1",
-    "nodemon": "^2.0.4"
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.3.1",
+    "prettier": "2.5.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "openssl-smime": "^1.0.1",
+    "xml-converter": "^1.0.1"
   }
 }
